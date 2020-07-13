@@ -27,3 +27,53 @@ Functional programming with JavaScript study notes
 | Initial definition | A single function                                                                                                                                                                    | Classes and objects, each has their own member variables which holds the data and internal methods to operate on the data |
 | Creating data      | Data is contained in simple structures, not necessarily defining what it is and what it can do. Dealing with raw data and what operations and transformations can be preformed on it | Creating a new object for each piece of data. Defining which sort of object each piece of data represents                 |
 | Immutability       | Creating a new variable and keeping original data intact                                                                                                                             | Mutates the original data (changes its state)                                                                             |
+
+### 1. First-Class Functions
+
+Function assignment
+
+```javascript
+/**
+ * The function can be called from any position in the code
+ * since the function is being hoisted and the compiler
+ * moves it automatically to the top of the file
+ */
+function doSomething() {
+	...
+};
+
+/**
+ * As a function variable the function can only be used
+ * only after it has been declared
+ */
+const doSomething = function () {
+	...
+};
+```
+
+Basic syntax
+
+```javascript
+const greet = function () {
+	console.log('Hello World!');
+};
+
+const greetUser = function (name) {
+	return 'Hello ' + name;
+};
+
+greet(); // "Hello World!"
+greetUser('John Doe'); // "Hello John Doe"
+```
+
+Function variables and Parentheses
+
+```javascript
+// With parentheses - represents the function return value
+let user1 = greetUser('John Doe');
+user1; // "Hello John Doe"
+
+// Without parentheses - represents the function itself
+let user2 = greetUser;
+user2('Jane Doe'); // "Hello Jane Doe"
+```

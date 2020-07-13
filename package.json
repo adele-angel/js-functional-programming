@@ -4,6 +4,7 @@
 	"description": "Functional programming with JavaScript study",
 	"main": "index.js",
 	"scripts": {
+		"start": "node index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -24,5 +25,8 @@
 	"homepage": "https://github.com/adele-angel/js-functional-programming#readme",
 	"dependencies": {
 		"lodash": "^4.17.19"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.4"
 	}
 }
