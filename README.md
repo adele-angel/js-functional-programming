@@ -156,3 +156,7 @@ function someFunction() {
 const printValueOfX = someFunction();
 printValueOfX(); // "x is 5"
 ```
+
+Higher-order function
+
+A function that takes a function as an argument, returns a function, or both
