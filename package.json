@@ -1,0 +1,28 @@
+{
+	"name": "js-functional-programming",
+	"version": "1.0.0",
+	"description": "Functional programming with JavaScript study",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adele-angel/js-functional-programming.git"
+	},
+	"keywords": [
+		"JavaScript",
+		"ES6",
+		"Node",
+		"Functional Programming"
+	],
+	"author": "Adele Angel",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/adele-angel/js-functional-programming/issues"
+	},
+	"homepage": "https://github.com/adele-angel/js-functional-programming#readme",
+	"dependencies": {
+		"lodash": "^4.17.19"
+	}
+}
