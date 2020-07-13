@@ -51,9 +51,8 @@ const doSomething = function () {
 };
 ```
 
-Basic syntax
-
 ```javascript
+// Basic syntax
 const greet = function () {
 	console.log('Hello World!');
 };
@@ -95,4 +94,65 @@ function add(x, y) {
 const combine4and7 = function (someFunction) {
 	return someFunction(4, 7);
 };
+```
+
+Closure and returning functions
+
+```javascript
+// Basic syntax
+function giveMeAFunction() {
+	return function () {
+		console.log("I'm a function");
+	};
+}
+
+const aFunction = giveMeAFunction();
+
+aFunction(); // "I'm a function"
+giveMeAFunction()(); // "I'm a function"
+```
+
+Returning multiple functions in the form of a JavaScript object
+
+```javascript
+function return2Functions() {
+	return {
+		function1: function () {
+			console.log("I'm the first function!");
+		},
+		function2: function () {
+			console.log("I'm the second function!");
+		},
+	};
+}
+
+const twoFunctions = return2Functions();
+
+twoFunctions.function1(); // "I'm the first function"
+twoFunctions.function2(); // "I'm the second function"
+```
+
+Variable scope
+
+```javascript
+function someFunction() {
+	let x = 5;
+	console.log(x); // 5
+}
+
+console.log(x); // undefined
+```
+
+Closures and capturing
+
+```javascript
+function someFunction() {
+	let x = 5;
+	return function () {
+		console.log('x is', x); // "x is 5"
+	};
+}
+
+const printValueOfX = someFunction();
+printValueOfX(); // "x is 5"
 ```
