@@ -77,3 +77,22 @@ user1; // "Hello John Doe"
 let user2 = greetUser;
 user2('Jane Doe'); // "Hello Jane Doe"
 ```
+
+Passing functions as arguments
+
+```javascript
+/**
+ * Passing values
+ */
+function add(x, y) {
+	return x + y;
+}
+
+/**
+ * Passing functions
+ * Instead of passing values we're passing actions!
+ */
+const combine4and7 = function (someFunction) {
+	return someFunction(4, 7);
+};
+```
