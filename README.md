@@ -132,17 +132,6 @@ twoFunctions.function1(); // "I'm the first function"
 twoFunctions.function2(); // "I'm the second function"
 ```
 
-Variable scope
-
-```javascript
-function someFunction() {
-	let x = 5;
-	console.log(x); // 5
-}
-
-console.log(x); // undefined
-```
-
 Closures and capturing
 
 ```javascript
@@ -157,6 +146,44 @@ const printValueOfX = someFunction();
 printValueOfX(); // "x is 5"
 ```
 
-Higher-order function
+Higher-order function - A function that takes a function as an argument, returns a function, or both
 
-A function that takes a function as an argument, returns a function, or both
+### 2. Array Functions
+
+\_.map()
+
+```javascript
+// Takes all the elements in an array and convert them to some other value
+// _.map() does not change the original array,
+// but returns a copy that contains the return values
+// of the function for each element
+// The result have to be assigned to something
+const elements = [1, 2, 3, 4, 5];
+// _.map(elements, f) => [f(1), f(2), f(3), f(4), f(5)];
+```
+
+\_.filter()
+
+```javascript
+// Takes only the elements in an array that fits certain criteria
+// _.filter() does not change the original array,
+// return values of the function for each element are boolean
+const elements = [element1, element2, element3, element4, element5];
+// _.filter(elements, f) => [element1, element3, element4];
+```
+
+\_.every() \_.some();
+
+Takes only the elements in an array that fits certain criteria
+Returns a boolean - true if the function returns true for all/some of the elements in the array
+
+\_.reduce();
+
+Takes an array and based on a given function reduces the array down to a single value
+
+```javascript
+_.reduce(array, function(accumulatedValue, element)) {
+	...
+	return ...
+}, startingValue)
+```
