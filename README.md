@@ -187,3 +187,12 @@ _.reduce(array, function(accumulatedValue, element)) {
 	return ...
 }, startingValue)
 ```
+
+### 3. Callbacks
+
+```javascript
+// Basic syntax
+function someAsyncAFunction(function(err, result) {
+	...
+})
+```
