@@ -196,3 +196,9 @@ function someAsyncAFunction(function(err, result) {
 	...
 })
 ```
+
+### 4. Advanced Functional Concepts
+
+partial applications
+
+recursion
